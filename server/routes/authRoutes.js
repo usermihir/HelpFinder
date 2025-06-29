@@ -40,6 +40,4 @@ router.get('/workers', async (req, res) => {
   }
 });
 
-
-
 export default router;

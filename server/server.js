@@ -4,7 +4,6 @@ import dotenv from 'dotenv';
 import cors from 'cors';
 import authRoutes from './routes/authRoutes.js';
 
-
 dotenv.config();
 
 const app = express();
@@ -16,8 +15,6 @@ app.get('/', (req, res) => res.send('API is running...'));
 
 const PORT = process.env.PORT || 5000;
 mongoose.connect(process.env.MONGO_URI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
 }).then(() => {
   app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
 }).catch(err => console.error(err));

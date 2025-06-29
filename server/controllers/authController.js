@@ -116,7 +116,7 @@ export const loginUser = async (req, res) => {
       success: true,
       token,
       user: {
-        id: user._id,
+        _id: user._id,
         name: user.name,
         role: user.role
       }
