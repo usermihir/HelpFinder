@@ -1,0 +1,102 @@
+.worker-list-container {
+  padding: 60px 20px;
+  background: linear-gradient(to right, #f8f9fa, #ffffff);
+  min-height: 100vh;
+  animation: fadeIn 0.5s ease-in;
+}
+
+.worker-title {
+  font-size: 2.5rem;
+  color: #4e54c8;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* Filter Bar */
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center the whole bar horizontally */
+  align-items: center;     /* Center inputs vertically */
+  gap: 10px;               /* Space between input fields */
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 800px;
+  margin: 20px auto;       /* Center the whole bar on the page */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.filter-bar input,
+.filter-bar select {
+  padding: 10px 15px;
+  border: 1.8px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  min-width: 180px;
+  transition: border-color 0.3s ease;
+}
+
+.filter-bar input:focus,
+.filter-bar select:focus {
+  border-color: #4e54c8;
+  outline: none;
+}
+
+/* Worker Card Grid */
+.worker-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  padding: 0;
+  list-style: none;
+}
+
+.worker-card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.worker-card:hover {
+  transform: translateY(-5px);
+}
+
+.worker-card a {
+  text-decoration: none;
+  color: #333;
+}
+
+.worker-card h4 {
+  font-size: 1.3rem;
+  color: #4e54c8;
+  margin-bottom: 10px;
+}
+
+.worker-card p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .filter-bar {
+    flex-direction: column;
+    align-items: center;
+  }
+}

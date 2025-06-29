@@ -1,0 +1,26 @@
+.add-worker-container {
+  max-width: 500px;
+  margin: 60px auto;
+  padding: 25px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-family: sans-serif;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.add-worker-form input {
+  width: 100%;
+  margin-bottom: 14px;
+  padding: 10px;
+  font-size: 15px;
+}
+
+.add-worker-form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #222;
+  color: white;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
