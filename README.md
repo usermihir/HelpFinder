@@ -106,3 +106,14 @@ Feel free to connect on (https://www.linkedin.com/in/mihir-kumar-behera-b59a1229
 
 This version includes all sections with clean formatting and GitHub-friendly Markdown. Let me know if you want to add [screenshots, video demos, or deployment instructions](f) next!
 ```
+## screenshots
+//home
+![Home Page](https://github.com/usermihir/HelpFinder/blob/main/client/public/ss1.png?raw=true)
+![About](https://github.com/usermihir/HelpFinder/blob/main/client/public/ss4.png?raw=true)
+![blog](https://github.com/usermihir/HelpFinder/blob/main/client/public/ss5.png?raw=true)
+![contact](https://github.com/usermihir/HelpFinder/blob/main/client/public/ss6.png?raw=true)
+//workerlist
+![workers](https://github.com/usermihir/HelpFinder/blob/main/client/public/ss7.png?raw=true)
+![worker location](https://github.com/usermihir/HelpFinder/blob/main/client/public/ss8.png?raw=true)
+//profile
+![worker profile](https://github.com/usermihir/HelpFinder/blob/main/client/public/ss9.png?raw=true)
