@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import './WorkerList.css';
 import MapView from './MapView';
 import { useLocation } from "react-router-dom";
+import Navbar1 from '../components/Navbar1';
+import Footer from '../components/Footer';
 
 function WorkerList() {
   const [workers, setWorkers] = useState([]);
@@ -58,8 +60,10 @@ function WorkerList() {
   }
 
   return (
+    <>
+     <Navbar1 className = "navbar"/>
     <div className="worker-list-container">
-      <h2 className="worker-title">Verified Workers</h2>
+      {/* <h2 className="worker-title">Verified Workers</h2> */}
 
       {/* Filter + Search */}
       <div className="filter-bar">
@@ -115,6 +119,8 @@ function WorkerList() {
 
       {filteredWorkers.length > 0 && <MapView workers={filteredWorkers} />}
     </div>
+    <Footer />
+    </>
   );
 }
 

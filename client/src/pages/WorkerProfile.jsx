@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
+import './WorkerProfile.css'
 
 function WorkerProfile() {
   const { id } = useParams();
@@ -27,33 +28,19 @@ function WorkerProfile() {
   if (!worker) return <p>No profile found.</p>;
 
   return (
-    <div style={{ padding: "20px", fontFamily: "Arial, sans-serif" }}>
-      <h2>{worker.name}'s Profile</h2>
-      <p>Email: {worker.email}</p>
-      <p>Category: {worker.category}</p>
-      <p>Phone: {worker.phone}</p>
-      <p>Address: {worker.address}</p>
+    <div className="worker-profile-container">
+  <h2>{worker.name}'s Profile</h2>
+  <p>Email: {worker.email}</p>
+  <p>Category: {worker.category}</p>
+  <p>Phone: {worker.phone}</p>
+  <p>Address: {worker.address}</p>
 
-      {/* Buttons Section */}
-      <div style={{ marginTop: "20px", display: "flex", gap: "12px", flexWrap: "wrap" }}>
-        <button style={btnStyle}>Book Request</button>
-        <a href={`mailto:${worker.email}`} style={{ ...btnStyle, textDecoration: 'none' }}>
-          Send Mail
-        </a>
-      </div>
-    </div>
+  <div className="profile-buttons">
+    <button className="profile-button">Book Request</button>
+    <a href={`mailto:${worker.email}`} className="profile-button">Send Mail</a>
+  </div>
+</div>
   );
 }
-
-// Simple Button Styling
-const btnStyle = {
-  padding: "10px 16px",
-  fontSize: "16px",
-  borderRadius: "8px",
-  border: "none",
-  cursor: "pointer",
-  backgroundColor: "#007bff",
-  color: "#fff"
-};
 
 export default WorkerProfile;

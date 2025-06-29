@@ -1,72 +1,64 @@
-/* Page Background */
-.worker-profile-wrapper {
-  min-height: 100vh;
+.worker-profile-container {
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 700px;
+  margin: auto;
+  background: linear-gradient(to right, #f0f4ff, #fff);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.worker-profile-container h2 {
+  font-size: 28px;
+  color: #1a1a2e;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.worker-profile-container p {
+  font-size: 16px;
+  color: #333;
+  margin: 8px 0;
+  line-height: 1.6;
+}
+
+.profile-buttons {
+  margin-top: 24px;
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
   justify-content: center;
-  background: linear-gradient(to right, #4e54c8, #8f94fb);
-  padding: 40px 20px;
-  animation: fadeIn 0.6s ease;
 }
 
-/* Card Style */
-.worker-profile-card {
-  background-color: white;
-  padding: 40px;
-  border-radius: 15px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-  width: 100%;
-  max-width: 600px;
-  animation: slideInUp 0.6s ease;
-}
-
-.worker-profile-card h2 {
-  font-size: 2rem;
-  color: #4e54c8;
-  margin-bottom: 20px;
-}
-
-.worker-profile-card p {
-  font-size: 1.1rem;
-  color: #555;
-  margin-bottom: 12px;
-}
-
-/* Booking Button */
-.booking-btn {
-  margin-top: 25px;
-  padding: 12px 24px;
-  font-size: 1rem;
-  background-color: #4e54c8;
-  color: white;
-  border: none;
+.profile-button {
+  padding: 10px 20px;
+  font-size: 16px;
   border-radius: 8px;
-  font-weight: bold;
+  border: none;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  background-color: #4a90e2;
+  color: white;
+  transition: background-color 0.3s, transform 0.2s;
+  text-decoration: none;
 }
 
-.booking-btn:hover {
-  background-color: #3e44b2;
+.profile-button:hover {
+  background-color: #357ae8;
+  transform: translateY(-2px);
 }
 
-/* Animations */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
+@media (max-width: 600px) {
+  .worker-profile-container {
+    padding: 16px;
   }
-  to {
-    opacity: 1;
-  }
-}
 
-@keyframes slideInUp {
-  from {
-    transform: translateY(30px);
-    opacity: 0;
+  .profile-buttons {
+    flex-direction: column;
+    align-items: stretch;
   }
-  to {
-    transform: translateY(0);
-    opacity: 1;
+
+  .profile-button {
+    width: 100%;
+    text-align: center;
   }
 }
